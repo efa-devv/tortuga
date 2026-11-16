@@ -1,0 +1,11 @@
+{
+  "name": "tortuga",
+  "version": "1.0.0",
+  "description": "Mini lenguaje de dibujo que muestra su AFD léxico, su analizador LL(1) con pila y su árbol de derivación.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8000"
+  }
+}

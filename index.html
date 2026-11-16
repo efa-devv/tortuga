@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tortuga · Autómatas y Lenguajes Formales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Tortuga</h1>
+    <p>Un mini lenguaje de dibujo que muestra cómo se reconoce: AFD léxico, autómata de pila LL(1) y árbol de derivación.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel editor" aria-label="Programa">
+      <label class="field">
+        <span>Ejemplo</span>
+        <select id="example-select"></select>
+      </label>
+      <label class="field grow">
+        <span>Programa</span>
+        <textarea id="source" spellcheck="false" autocomplete="off"></textarea>
+      </label>
+      <div id="status" class="status" role="status"></div>
+      <details class="reference">
+        <summary>Referencia del lenguaje</summary>
+        <ul>
+          <li><code>avanza N</code> · <code>retrocede N</code> mueven la tortuga N pasos</li>
+          <li><code>derecha N</code> · <code>izquierda N</code> giran N grados</li>
+          <li><code>sube</code> · <code>baja</code> levantan o apoyan la pluma</li>
+          <li><code>color NOMBRE</code> <span id="color-names"></span></li>
+          <li><code>repetir N [ ... ]</code> repite el bloque N veces</li>
+          <li><code># texto</code> es un comentario</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="panel results" aria-label="Resultados">
+      <nav id="tabs" class="tabs" role="tablist"></nav>
+      <div id="view" class="view"></div>
+    </section>
+  </main>
+
+  <script type="module" src="src/ui/main.js"></script>
+</body>
+</html>
